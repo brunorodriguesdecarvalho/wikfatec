@@ -11,5 +11,5 @@ $(() => {
 })   
 
 function novaregaula(regaula) {
-    $.post('http://localhost:3000/regaula', regaula)
+    $.post('/regaula', regaula)
 }
