@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro de Aula</title>
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="./src/formAula.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <br>
+        <a href="listAula.html">Todos os registros</a>
+        <br>
+        <br>
+        <div id="app">
+            <div class="celula"><h1>Novo Registro de Aula</h1></div>
+                <form>
+                    <div class="celula"><textarea id="anotAnota" required placeholder="Anotações"></textarea></div>
+                    <div class="celula"><textarea id="anotDuv" required placeholder="Dúvidas"></textarea></div>
+                    <div class="linha">
+                        <div class="celula">
+                            <select id="anotMateria" required>
+                                <option selected disabled>Escolha uma matéria</option>
+                                <option>Android/Java (ILP 506 - 271)</option>
+                                <option>Cálculo (MCA 002 - 282)</option>
+                                <option>Cobol (ILP 510 - 271)</option>
+                                <option>Estatística 1 (MET 100 - 271)</option>
+                                <option>Estrutura de Dados (IED 001 - 271)</option>
+                                <option>Hardware (IHW 100 - 271)</option>
+                                <option>Matemática 1 (MMD 001 - 261)</option>
+                                <option>Sistemas Operacionais (ISO 100 - 261)</option>
+                                <option>Programação em C (ILP 010 - 282)</option>
+                                <option>??? (ISI 002 - 282)</option>
+                                <option>??? (ILP 500 - 282)</option>
+                                <option>??? (LPO 001 - 282)</option>
+                            </select>
+                        </div>
+                        <div class="celula"><input type="date" id="anotDataAula" required></div>
+                        <div class="celula"><button type="submit" id="Enviar">Enviar</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
