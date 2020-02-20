@@ -30,10 +30,11 @@ a, #Enviar {
     padding: 10px;
 }
 a:link, #Enviar:link, a:visited, #Enviar:visited { text-decoration: none;}
-a:hover, #Enviar:hover { background-color: rgb(37, 31, 31) }
+a:hover, #Enviar:hover { background-color: rgb(15, 32, 17) }
 .link{margin: 20px 0; display: inline-block;}
 select option {color: black;}
-#anotMateria, #anotDataAula, #Enviar, #anotAnota, #anotDuv, #anot, a{
+#anotMateria, #anotDataAula, #Enviar, #anotAnota, #anotDuv, #anot, #glossNome, 
+#glossAutor, #glossDesc, #glossRef, #glossMateria, a{
     margin: 5px; 
     border: 1px dotted grey; 
     border-radius: 5px;
@@ -41,7 +42,8 @@ select option {color: black;}
     font-family: 'rob';
     color: white;
 }
-#anotMateria, #anotDataAula, #anotAnota, #anotDuv, #anot {background-color: rgba(255, 255, 255, 0.1);}
-#anotAnota, #anotDuv {width: 80%; height: 100px; padding: 10px;}
+#anotMateria, #anotDataAula, #anotAnota, #anotDuv, #anot, #glossNome, 
+#glossAutor, #glossDesc, #glossRef, #glossMateria {background-color: rgba(255, 255, 255, 0.1);}
+#anotAnota, #anotDuv, #glossDesc, #glossRef {width: 80%; height: 100px; padding: 10px;}
 #anot{padding-left: 10px;}
-#anotDataAula, #anotMateria {height: 40px;}
+#anotDataAula, #anotMateria, #glossNome, #glossAutor, #glossMateria {height: 30px;}

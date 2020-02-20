@@ -42,6 +42,44 @@ app.post('/regaula', (req, res) => {
     window.alert('Nova aula salva no MongoDB.')
 })
 
+
+//Começo do glossTermo
+app.get('/glossTermo', (req, res) => {
+    var MongoClient = require('mongodb').MongoClient;
+    MongoClient.connect(dbUrl, { useUnifiedTopology: true }, function (err, dbpbsc) {
+        console.log('/glossTermo acessado!')
+        if (err) throw err;
+        var dbo = dbpbsc.db("dbpbsc");
+        dbo.collection("glosstermos").find({}, { projection: { _id: 0 } }).toArray(function (err, glossTermo) {
+            if (err) throw err
+            else console.log("Collection glossTermo foi aberta.")
+            res.send(glossTermo)
+            dbpbsc.close()
+            console.log("MondoDB fechado")
+        })
+    })
+})
+
+var dbModelglossTermo = mongoose.model('glossTermo', {
+    glossNome: String,
+    glossAutor: String,
+    glossDesc: String,
+    glossRef: String,
+    glossMateria: String,
+})
+
+app.post('/glossTermo', (req, res) => {
+    console.log("Rota /glossTermo foi acessada")
+    var glossTermo = new dbModelglossTermo(req.body)
+    var glossTermoMod = glossTermo.save()
+    console.log('Nova aula salva no MongoDB.')
+})
+
+
+
+
+
+
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true}, function(err, dbpbsc) {
     console.log('MongoDB foi acessado.')
 })
