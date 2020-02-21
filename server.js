@@ -18,7 +18,8 @@ app.get('/regaula', (req, res) => {
         console.log('/regaula acessado!')
         if (err) throw err;
         var dbo = dbpbsc.db("dbpbsc");
-        dbo.collection("regaulas").find({}, { projection: { _id: 0 } }).toArray(function (err, regaula) {
+        var ordem = { anotMateria: 1, anotDataAula: 1 }
+        dbo.collection("regaulas").find({}, { projection: { _id: 0 } }).sort(ordem).toArray(function (err, regaula) {
             if (err) throw err
             else console.log("Collection regaula foi aberta.")
             res.send(regaula)
