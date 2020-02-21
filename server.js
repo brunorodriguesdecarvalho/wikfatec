@@ -51,7 +51,8 @@ app.get('/glossTermo', (req, res) => {
         console.log('/glossTermo acessado!')
         if (err) throw err;
         var dbo = dbpbsc.db("dbpbsc");
-        dbo.collection("glosstermos").find({}, { projection: { _id: 0 } }).toArray(function (err, glossTermo) {
+        var ordem = { glossNome: 1, glossMateria: 1, glossAutor: 1}
+        dbo.collection("glosstermos").find({}, { projection: { _id: 0 } }).sort(ordem).toArray(function (err, glossTermo) {
             if (err) throw err
             else console.log("Collection glossTermo foi aberta.")
             res.send(glossTermo)
