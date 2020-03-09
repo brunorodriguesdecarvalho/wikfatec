@@ -18,7 +18,14 @@ body {margin: 0px;
 }
 #app {width: 95%;  margin: 0 auto;}
 div .linha{display: flexbox;}
-div .celula{display: block;}
+div .celula, .statBola{display: block;}
+div .statBola {
+    border: none; 
+    height: 28px; 
+    width: 28px; 
+    border-radius:30px;
+    vertical-align: middle;
+}
 h2, li {text-align: left;}
 h1 {text-align: center;}
 ul {padding-inline-start: 10px;}
@@ -30,13 +37,13 @@ a, #Enviar {
     padding: 10px;
 }
 a:link, #Enviar:link, a:visited, #Enviar:visited { text-decoration: none;}
-a:hover, #Enviar:hover { background-color: rgb(15, 32, 17) }
-.link{margin: 20px 0; display: inline-block;}
+a:hover, #Enviar:hover { background-color: rgb(15, 32, 17) ;}
+.link{margin: 20px 0; display: block;}
 select option {color: black;}
 #anotMateria, #anotDataAula, #Enviar, #anotAnota, #anotDuv, #anot, #glossNome, 
 #glossAutor, #glossDesc, #glossRef, #glossMateria, a{
     margin: 5px; 
-    border: 1px dotted grey; 
+    border: 1px solid grey; 
     border-radius: 5px;
     font-size: 18px;
     font-family: 'rob';
