@@ -5,9 +5,9 @@ body {
     background-size: cover;
     background-position: bottom;
 }
-.app {width: 95%;margin: auto; overflow: scroll;}
-table{background-color: black; color: white; opacity: 0.9; width: 85%;}
-.titulo {word-wrap: break-word; font-weight: bold; font-size: 3.5vw; display:flexbox;}
+.app {width: 95%;margin: auto; overflow:none;}
+table{background-color: black; color: white; opacity: 0.95;}
+.titulo {word-wrap: break-word; font-weight: bold; font-size: 3.5vw; display:flexbox;color:red;}
 h1 {
     margin-block-start: 2vh; 
     margin-block-end: 2vh;
@@ -17,7 +17,7 @@ h1 {
 .data {font-size: 3.5vw; border-width: 0px;}
 input[type=date]::-webkit-inner-spin-button {-webkit-appearance: none;display: none;}
 input[type=date]::-webkit-calendar-picker-indicator {-webkit-appearance: none;display: none;}
-td {padding: 1vw; width: 16%;}
+td {padding: 0.75vw; width: 16%;}
 button {
     background-color: rgb(200, 0, 0);
     color: rgb(255,255,255);
@@ -49,15 +49,10 @@ button:hover {background-color: rgb(252, 3, 3); color: rgb(255,255,255);}
 }
 @media screen and (min-width:1000px){
     button {padding: 1vw;}
-    h1 {font-size: 4vw;}
-    .titulo {font-size: 2.5vw;}
-    .cont, button, .data {font-size: 1.75vw;}    
+    h1 {font-size: 3.5vw;}
+    .titulo {font-size: 2vw;}
+    .cont, button, .data {font-size: 1.5vw;}    
 }
 .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
   }

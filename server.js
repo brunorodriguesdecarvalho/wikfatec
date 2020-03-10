@@ -77,10 +77,29 @@ app.post('/glossTermo', (req, res) => {
     console.log('Nova aula salva no MongoDB.')
 })
 
+var dbModelFalta = mongoose.model('regfaltas', {
+    fMat: String,
+    fAulas: Number,
+    fFaltas: Number,
+    fData: Number,
+});
 
-
-
-
+app.get('/regfaltas', (req, res) => {
+    var MongoClient = require('mongodb').MongoClient;
+    MongoClient.connect(dbUrl, { useUnifiedTopology: true }, function (err, dbpbsc) {
+        console.log('/regfaltas acessado!')
+        if (err) throw err;
+        var dbo = dbpbsc.db("dbpbsc");
+        var ordem = { fMat: 1 }
+        dbo.collection("regfaltas").find({}, { projection: { _id: 0 } }).sort(ordem).toArray(function (err, regfaltas) {
+            if (err) throw err
+            else console.log("Collection regfaltas foi aberta.")
+            res.send(regfaltas)
+            dbpbsc.close()
+            console.log("MondoDB fechado")
+        })
+    })
+})
 
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true}, function(err, dbpbsc) {
     console.log('MongoDB foi acessado.')

@@ -4,62 +4,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Controle de Faltas</title>
         <link href="./style_faltas.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     </head>
     <body>
         <table class="app center">
-            <tr style="background-color: black;">
-                <td colspan="6"><h1>WikiFATEC: Controle&nbsp;de&nbsp;Faltas</h1></td>
-            </tr>
-            <tr>
-                <td colspan="6">
-                    <button type="submit"><i class='fa fa-backward'></i>&nbsp;&nbsp;&nbsp;Início</button>
-                    &nbsp;&nbsp;
-                    <button type="submit"><i class='far fa-save'></i>&nbsp;&nbsp;&nbsp;Gravar</button>
-                </td>
-            </tr>
-            <tr class="titulo">
-                <td>Matéria</td>
-                <td>Aulas</td>
-                <td>Faltas</td>
-                <td>Freq.</td>
-                <td>Status</td>
-                <td>Atualização</td>
-            </tr>
+            <thead>
+                <tr style="background-color: black;">
+                    <td colspan="6"><h1>WikiFATEC: Controle&nbsp;de&nbsp;Faltas</h1></td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <button type="submit" onclick="window.location.href='./index.html'"><i class='fa fa-backward'></i>&nbsp;&nbsp;&nbsp;Início</button>
+                        &nbsp;&nbsp;
+                        <button type="submit"><i class='far fa-save'></i>&nbsp;&nbsp;&nbsp;Gravar</button>
+                    </td>
+                </tr>
+                <tr class="titulo">
+                    <td>Matéria</td>
+                    <td>Aulas</td>
+                    <td>Faltas</td>
+                    <td>Freq.</td>
+                    <td>Status</td>
+                    <td>Atualização</td>
+                </tr>
+            </thead>
             <form>
-                <tr class="cont">
-                    <td>Estat.</td>
-                    <td>20</td>
-                    <td>1</td>
-                    <td>100%</td>
-                    <td>OK</td>
-                    <td><input type="date" class="data" value="2020-03-09"></td>
-                </tr>
-                <tr class="cont">
-                    <td>Estat.</td>
-                    <td>20</td>
-                    <td>1</td>
-                    <td>100%</td>
-                    <td>OK</td>
-                    <td><input type="date" class="data" value="2020-03-09"></td>
-                </tr>
-                <tr class="cont">
-                    <td>Estat.</td>
-                    <td>20</td>
-                    <td>1</td>
-                    <td>100%</td>
-                    <td>OK</td>
-                    <td><input type="date" class="data" value="2020-03-09"></td>
-                </tr>
-                <tr class="cont">
-                    <td>Estatís.</td>
-                    <td>20</td>
-                    <td>1</td>
-                    <td>100%</td>
-                    <td>OK</td>
-                    <td><input type="date" class="data" value="2020-03-09"></td>
-                </tr>
+                <tbody id="lista"></tbody>
             </form>
         </table>       
     </body>
+    <script src='./src/listFaltas.js'></script>
 </html>
